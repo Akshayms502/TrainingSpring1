@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   
+	   >
+     	
+	<bean id="questionBank" class="com.spring.collections.QuestionBank">
+	<property name="question" value="what is java"></property>
+	<property name="option"> 
+	<list>
+	<value>a programming language</value>
+	<value>object oriented language</value>
+	</list>
+	</property>
+	</bean>
+	
+	<bean id="addressSet" class="com.spring.collections.AdressSet">
+	<property name="address" >
+	<set>
+	<value>Bangalore</value>
+	<value>mysore</value>
+	<value>mandya</value>
+	</set>
+	</property>
+	</bean>
+	
+	
+	<bean id="accountMap" class="com.spring.collections.AccountMap">
+	<property name="accountMap" >
+	<map>
+	<entry key="ramu" value="40000"></entry>
+	<entry key="sam" value="3000"></entry>
+	<entry key="yam" value="50000"></entry>
+	<entry key="cam" value="80000"></entry>
+	
+	</map>
+	</property>
+	</bean>
+	
+	<bean id="myCollection" class="com.spring.collections.MyCollection" autowire="byName"></bean>
+
+
+</beans>
